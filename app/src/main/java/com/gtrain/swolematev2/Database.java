@@ -354,6 +354,7 @@ public class Database extends SQLiteOpenHelper {
 
     //Read
     public Workout getWorkoutByName(String nameOf) {
+
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query(TABLE_WORKOUTS, allWorkoutColumns, COL_NAMEOF + " = ?", new String[] {nameOf}, null, null, null, null);
         Workout w = null;
